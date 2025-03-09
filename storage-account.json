@@ -146,8 +146,9 @@
                     "vmSize": "[parameters('vmSize')]"
                 },
                 "osProfile": {
-                    "computerName": "[variables('vmName')]",
-                    "adminUsername": "[parameters('adminUsername')]",
+                    "computerName": "firstvm1",
+                    "adminUsername": "naresh",
+                    "adminPassword": "Naresh@123"
                     "linuxConfiguration": {
                         "disablePasswordAuthentication": true,
                         "ssh": {
