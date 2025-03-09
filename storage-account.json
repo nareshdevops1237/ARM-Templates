@@ -1,35 +1,22 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
-        "storageAccountTier":{
-            "type": "string",
-            "metadata":{
-                "description": "Tier of the storage account"
-            },
-            "defaultValue": "Premium",
-            "allowedValues":[
-                "Premium",
-                "Standard"
-            ]
-
-        }
-    },
+    "parameters": {},
     "functions": [],
     "variables": {},
     "resources": [
         {
-            "name": "nareshch",
+            "name": "bank-stoage1",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2023-05-01",
             "tags": {
-                "displayName": "firststorageaccount1"
+                "displayName": "bank-storage1"
             },
             "location": "[resourceGroup().location]",
             "kind": "StorageV2",
             "sku": {
                 "name": "Premium_LRS",
-                "tier": "[parameters('storageAccountTier')]"
+                "tier": "Premium"
             }
         }
     ],
